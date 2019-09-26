@@ -6,6 +6,10 @@ class Monster:
     def getAttack(self):
         return self._breed.getAttack()
 
+    def getBreed(self):
+        "Breed 本质上一个类型，而 Monster 是无类型的——需要实例化才能使用。"
+        return self._breed
+
 
 class Breed:
     def __init__(
