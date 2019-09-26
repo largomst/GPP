@@ -4,7 +4,12 @@ class Monster:
         self._breed = breed
 
     def getAttack(self):
-        return self._breed.getAttack()
+        if self._health < LOW_HEALTH:
+            return "The monster fails weakly."
+
+    def getBreed(self):
+        "Breed 本质上一个类型，而 Monster 是无类型的——需要实例化才能使用。"
+        return self._breed
 
 
 class Breed:
